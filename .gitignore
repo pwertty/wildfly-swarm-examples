@@ -1,6 +1,4 @@
 target/
-
-#eclipse
 .classpath
 .project
 .settings/
