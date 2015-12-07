@@ -1,0 +1,2 @@
+server:
+  jboss.http.port: 8888

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="WARN" packages="com.acalo.wildfly.utils.appenders">
+	<Properties>
+		<Property name="log-path">/home/antonio/logs</Property>
+	</Properties>
+	<Appenders>
+		<MyCustomAppender name="custom">
+			<PatternLayout
+				pattern="[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n" />
+		</MyCustomAppender>
+		<Console name="console-log" target="SYSTEM_OUT">
+			<PatternLayout
+				pattern="[%-5level] %d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %c{1} - %msg%n" />
+		</Console>
+	</Appenders>
+	<Loggers>
+		<Logger name="File_Log" level="debug" additivity="false">
+			<appender-ref ref="custom" level="debug" />
+		</Logger>
+		<Root level="info" additivity="false">
+			<AppenderRef ref="console-log" />
+		</Root>
+	</Loggers>
+</Configuration>
+

@@ -1,12 +1,11 @@
 package com.acalo.wildfly.ejb;
 
 import javax.ejb.Local;
-import javax.ejb.Remote;
 import javax.ejb.Stateful;
 
-@Remote
+@Local
 @Stateful
-public class RemoteEJB{
+public class LocalEJB{
 
 	public String printRemote(){
 		
